@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\jmarc\OneDrive\Desktop\curso java udemy\listaEstruturaSequencial\.metadata\.plugins\org.eclipse.jdt.core
+3501714628.index
+358685491.index
+1865797976.index
