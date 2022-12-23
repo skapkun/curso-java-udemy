@@ -122,7 +122,7 @@ Data: 22/12/2022
 Nome: Carla Cavalcante 
 Fazer um programa para ler o código de uma peça 1, o número de peças 1, o valor unitário de cada peça 1, o
 código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 2. Calcule e mostre o valor a ser pago
-
+*/
  public class Main {
 	 public static void main (String [] args) { 
 		 Scanner sc = new Scanner (System.in); 
@@ -135,53 +135,18 @@ código de uma peça 2, o número de peças 2 e o valor unitário de cada peça 
 		 System.out.print("Entre com o numero de pecas 1: "); 
 		 numeroPecas1 = sc.nextInt(); 
 		 System.out.print("Entre com o valor da peca 1: "); 
-		 valorPeca1 = sc.nextDouble(); 
+		 valorPeca1 = sc.nextInt(); 
 		 
 		 System.out.print("Entre com o codigo da peca 2: "); 
 		 codigoPeca2 = sc.nextInt(); 
 		 System.out.print("Entre com o numero de pecas 2: "); 
 		 numeroPecas2 = sc.nextInt(); 
 		 System.out.print("Entre com o valor da peca 2: "); 
-		 valorPeca2 = sc.nextDouble(); 
+		 valorPeca2 = sc.nextInt(); 
 		 
 		 totalAPagar = numeroPecas1*valorPeca1 + numeroPecas2*valorPeca2; 
 		 
 		 System.out.printf("TOTAL A PAGAR: R$ %.2f", totalAPagar); 
 		 
 	 }
- }*/
- 
- /*Sistema Operacional: Windows 10
- T�pico: Estrutura Sequencial
- Compilador: Eclipse
- Data: 22/12/2022
- Nome: Carla Cavalcante 
-Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e
-mostre:
-a) a área do triângulo retângulo que tem A por base e C por altura.
-b) a área do círculo de raio C. (pi = 3.14159)
-c) a área do trapézio que tem A e B por bases e C por altura.
-d) a área do quadrado que tem lado B.
-e) a área do retângulo que tem lados A e B.
- */
- 
- public class Main { 
-	 public static void main (String [] args) { 
-		 Scanner sc = new Scanner (System.in); 
-		 double A, B, C, pi=3.14159, area;
-		 
-		 System.out.print ("Entre com valor de A: "); 
-		 A = sc.nextDouble (); 
-		 System.out.print ("Entre com valor de B: "); 
-		 B = sc.nextDouble(); 
-		 System.out.printf("Entre com o valor de C: "); 
-		 C = sc.nextDouble(); 
-		 
-		 System.out.printf("\nTriangulo retangulo: %.3f", (A*C)/2);
-		 System.out.printf("\nCirculo: %.3f", pi*(Math.pow(C, 2)));
-		 System.out.printf("\nTrapezio: %.3f", ((A+B)*C)/2);
-		 System.out.printf("\nQuadrado: %.3f", Math.pow(B, 2));
-		 System.out.printf("\nRetangulo: %.3f", A*B);
-	 }
  }
-  

@@ -177,11 +177,11 @@ e) a área do retângulo que tem lados A e B.
 		 System.out.printf("Entre com o valor de C: "); 
 		 C = sc.nextDouble(); 
 		 
-		 System.out.printf("\nTriangulo retangulo: %.3f", (A*C)/2);
-		 System.out.printf("\nCirculo: %.3f", pi*(Math.pow(C, 2)));
-		 System.out.printf("\nTrapezio: %.3f", ((A+B)*C)/2);
-		 System.out.printf("\nQuadrado: %.3f", Math.pow(B, 2));
-		 System.out.printf("\nRetangulo: %.3f", A*B);
+		 System.out.printf("\nTriangulo retangulo: %.4f", (A*C)/2);
+		 System.out.printf("\nCirculo: %.4f", pi*(Math.pow(C, 2)));
+		 System.out.printf("\nTrapezio: %.4f", ((A+B)*C)/2);
+		 System.out.printf("\nQuadrado: %.4f", Math.pow(B, 2));
+		 System.out.printf("\nRetangulo: %.4f", A*B);
 	 }
  }
   
