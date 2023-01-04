@@ -32,6 +32,7 @@ public class Program {
 				Shape shape = new Rectangle (color, width, height);
 				list.add(shape);
 			}
+			
 			else if ( c == 'c') {
 				System.out.print("Radius: ");
 				double radius = sc.nextDouble();
