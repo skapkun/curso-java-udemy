@@ -14,10 +14,10 @@ public class Reservation {
 	public Reservation() {
 	}
 	
-	public Reservation(Integer roomNumber, Date checkin, Date checkout) {
+	public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
 		this.roomNumber = roomNumber;
-		this.checkIn = checkin;
-		this.checkOut = checkout;
+		this.checkIn = checkIn;
+		this.checkOut = checkOut;
 	}
 
 	public Integer getRoomNumber() {
@@ -45,14 +45,21 @@ public class Reservation {
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 	}
 	
-	public void updateDates (Date checkin, Date checkout) {
-		this.checkIn = checkIn;
-		this.checkOut = checkOut;
+	public String updateDates (Date checkin, Date checkout) {
+		Date now = new Date();
+		if (checkin.before(now) || checkout.before(now)) {
+			return "Reservation dates for update must be future dates";
+		}
+			else if (!checkout.after(checkin)) {
+					return "Check-out date must be after check-in date";
+				}
+		this.checkIn = checkin;
+		this.checkOut = checkout;
+		return null;
 	}
 
 	public String toString () {
 		StringBuilder sb = new StringBuilder(); 
-		sb.append("Reservation: ");
 		sb.append("Room ");
 		sb.append(roomNumber); 
 		sb.append(", check-in: ");
