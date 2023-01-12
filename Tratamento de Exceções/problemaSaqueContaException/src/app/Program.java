@@ -10,7 +10,7 @@ public class Program {
 	public static void main (String[]args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner (System.in); 
-		try {
+		 
 		System.out.println("Enter account data");
 		System.out.print("Number: ");
 		int n = sc.nextInt();
@@ -26,9 +26,8 @@ public class Program {
 		
 		System.out.print("Enter amount for withdraw: ");
 		double amountForWithdraw = sc.nextDouble();
-		
+		try {
 		ac.withdrawLimit(amountForWithdraw);
-		
 		System.out.println("New balance: "+String.format("%.2f", ac.getBalance()));
 			}
 		catch(DomainException e) {
