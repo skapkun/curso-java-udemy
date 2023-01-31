@@ -1,30 +1,18 @@
- package model.entities;
+package model.entities;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
 
-public class Contract {
+public class Installment {
 	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-	private int contractNumber; 
 	private LocalDate contractDate; 
 	private double contractValue;
-	
-	private List <Installment> installments = new ArrayList<>();
-	public Contract() {
-		 
+	 
+	public Installment() { 
 	}
-	public Contract(int contractNumber, LocalDate contractDate, double contractValue) { 
-		this.contractNumber = contractNumber;
+	public Installment(LocalDate contractDate, double contractValue) {
 		this.contractDate = contractDate;
 		this.contractValue = contractValue;
-	}
-	public int getContractNumber() {
-		return contractNumber;
-	}
-	public void setContractNumber(int contractNumber) {
-		this.contractNumber = contractNumber;
 	}
 	public LocalDate getContractDate() {
 		return contractDate;
@@ -38,12 +26,10 @@ public class Contract {
 	public void setContractValue(double contractValue) {
 		this.contractValue = contractValue;
 	}
-	public List<Installment> getInstallments() {
-		return installments;
+	@Override
+	public String toString() {
+		return contractDate.format(fmt) + "- R$" + String.format("%.2f", contractValue);
 	}
-	 
-	
-	
 	
 
 }
